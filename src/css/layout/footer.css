@@ -45,6 +45,13 @@
     }
 }
 
+@media screen and (min-width: 1440px) {
+    .footer-base {
+        flex-direction: row;
+        margin-right: 32px;
+    }
+}
+
 .logo-socials {
     margin-top: 45px;
 }
@@ -192,13 +199,13 @@
     margin-top: 32px;
     font-size: 18px;
 line-height: 1.33333;
-margin-right: 94px;
+margin-right: 34px;
 
  }
 
 .subscription-form {
     margin-top: 20px;
-    margin-right: 94px;
+    margin-right: 64px;
 
 } 
 }
@@ -278,6 +285,13 @@ margin-right: 94px;
     }
 
     .footer-rights-year {
-        margin-left: 178px; /* Ajusta el margen según sea necesario */
+        margin-left: 158px; /* Ajusta el margen según sea necesario */
     }
 }
+
+
+
+
+
+
+
