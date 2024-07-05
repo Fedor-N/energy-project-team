@@ -1,19 +1,7 @@
 .footer-section {
     background: #242424;
+    margin-left: 20px;
 
-
-}
-
-@media screen and (min-width: 768px) {
-    .footer-section {
-        padding-top: 32px;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .footer-section {
-        padding-top: 64px;
-    }
 }
 
 .footer-container {
@@ -21,16 +9,23 @@
     flex-wrap: wrap;
     flex-direction: column;
     row-gap: 40px;
-    padding-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
+    .footer-section {
+        padding-top: 32px;
+    }
     .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
         row-gap: 110px;
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
+    .footer-section {
+        padding-top: 64px;
+    }
     .footer-container {
         row-gap: 64px;
     }
@@ -38,64 +33,41 @@
 
 .footer-base {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
- justify-content: flex;
-
+    
 }
 
 @media screen and (min-width: 768px) {
     .footer-base {
         flex-direction: row;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .footer-base {
-        row-gap: calc((100% - 404px) / 2);
+        justify-content: space-between;
+        width: 100%;
     }
 }
 
 .footer-main {
-    
-    
-    flex-direction: column;
-    margin-top: 40px;
-}
-
-@media screen and (min-width: 768px) {
-    .footer-main {
-        row-gap: 32px;
-        margin-right: 152px;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .footer-main {
-        margin-right: 0px;
-    }
+    margin-top: 45px;
+   
 }
 
 .footer-logo {
-    display: inline-block; /* Щоб вони не їли весь доступний простір */
-    background-color: #242424; /* Колір футеру */
-    padding: 10px; /* Щоб вони не eслились з фоном */
-
+    display: inline-block;
+    
 }
 
 .footer-logo-icon {
-    fill: #f4f4f4; /* Color del logo */
-    vertical-align: middle; /* Alinea verticalmente el logo dentro del contenedor */
+   fill: #f4f4f4;
 }
 
 .footer-social-media-list {
     display: flex;
     column-gap: 12px;
-    margin-top: 20px;
+    margin-left: 20px; /* Маргін зверху 20px, решта - 0 */
+    justify-content: flex-start; /* Вирівнювання елементів по лівому краю */
 }
 
 .footer-social-media-link {
-    display: flex;  
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -103,43 +75,52 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     opacity: 0.8;
+    background: transparent;
+    transition: all 0.3s ease;
 }
 
-.footer-social-media-link:hover {
-    opacity: 0.8;
-    border: 1px solid #f4f4f4;
-    border-radius: 10px;
+.footer-social-media-link:hover,
+.footer-social-media-link:focus {
+    background-color: #f4f4f4; /* Колір фону при наведенні або фокусу */
+}
 
+.logo {
+    fill: #f4f4f4; /* Початковий колір іконки */
+    transition: fill 0.3s ease; /* Плавна зміна кольору */
+}
 
+.logo:hover,
+.logo:focus {
+    fill: #242424; /* Колір іконки при наведенні або фокусу */
 }
 
 
 .footer-text-section {
-    margin-right: 20px; 
+    margin: 20px;
+    
 }
 
 .footer-text-title {
-    font-style: normal;
     margin-top: 40px;
     font-weight: 400;
     font-size: 38px;
     line-height: 1.15789;
     letter-spacing: -0.02em;
     color: #f4f4f4;
-    font-family: "DM Sans", sans-serif; /* Asegura que el estilo de texto normal se aplique a todo el párrafo */
+    font-family: "DM Sans", sans-serif;
 }
 
 .footer-text-title em {
-    font-style: italic; /* Asegura que solo el texto dentro de <em> esté en cursiva */
+    font-style: italic;
 }
 
 .footer-text-subtitle {
     margin-top: 20px;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
-font-size: 14px;
-line-height: 1.28571;
-color: #f4f4f4;
+    font-size: 14px;
+    line-height: 1.28571;
+    color: #f4f4f4;
 }
 
 .subscription-form {
@@ -149,32 +130,24 @@ color: #f4f4f4;
     
 }
 
-
-/* Estilo del texto placeholder */
-input::placeholder {
-    color: #999; /* Cambia el color del placeholder */
-}
-
-/* Estilo para el campo de entrada del email */
-input[type="email"] {
-    background-color: inherit; /* Hace que el fondo del campo sea igual al fondo de la página */
-    border: 1px solid #f4f4f4; /* Bordes personalizados */
-    border-radius: 30px; /* Bordes redondeados */
-    padding: 12px 14px; /* Relleno interno del campo */
+.subscription-form input[type="email"] {
+    background-color: inherit;
+    border: 1px solid #f4f4f4;
+    border-radius: 30px;
+    padding: 12px 14px;
     width: 100%;
-    box-sizing: border-box; /* Incluye el borde y el relleno en el tamaño total */
-    color: #999; /* Hace que el color del texto sea el mismo que el color del texto del elemento padre */
-    font-size: 16px; /* Tamaño de fuente para el campo de entrada */
+    box-sizing: border-box;
+    color: #999;
+    font-size: 16px;
     outline: none;
+    margin-bottom: 20px;
 }
 
-
-#subscriptionForm button[type="submit"] {
-    margin-top: 20px;
+.subscription-form button[type="submit"] {
     border: 1px solid #f4f4f4;
     border-radius: 30px;
     width: 100%;
-   
+    max-width: 335px;
     height: 42px;
     background-color: #f4f4f4;
     text-align: center;
@@ -185,21 +158,22 @@ input[type="email"] {
     cursor: pointer;
 }
 
-#subscriptionForm button[type="submit"]:hover {
+.subscription-form button[type="submit"]:hover {
     background-color: #e0e0e0;
 }
-
 
 .footer-rights-section {
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 20px;
     font-family: "DM Sans", sans-serif;
-
 }
 
 .footer-rights-row {
-    margin-bottom: 10px; /* Espacio entre las filas */
+    margin-bottom: 10px;
+    display: flex;
+    margin-left: 20px;
+
 }
 
 .footer-rights-text {
@@ -208,7 +182,6 @@ input[type="email"] {
     line-height: 1.28571;
     letter-spacing: -0.02em;
     color: #c6cdd1;
-    
 }
 
 .footer-rights-link a {
@@ -216,12 +189,11 @@ input[type="email"] {
     font-weight: 400;
     color: #c6cdd1;
     opacity: 0.9;
-    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
-   
+    text-decoration: none;
 }
 
 .footer-rights-divider {
-   
+    margin: 0 8px;
     color: #c6cdd1;
     opacity: 0.9;
 }
@@ -231,5 +203,18 @@ input[type="email"] {
     font-weight: 400;
     color: #c6cdd1;
     opacity: 0.9;
-    margin-left: 18px;
+    margin-left: auto; /* Заповнює весь доступний простір зліва */
+    padding-right: 20px; /* Відступ від правого краю */
+}
+
+@media screen and (min-width: 768px) {
+    .footer-rights-section {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .footer-rights-text,
+    .footer-rights-row {
+        margin-bottom: 0;
+    }
 }
