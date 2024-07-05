@@ -13,10 +13,19 @@ document.getElementById('subscriptionForm').addEventListener('submit', function(
             },
             body: JSON.stringify({ email: email })
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
             // Обробка відповіді від backend
-            alert('Subscription successful!');
+            if (data.message) {
+                alert(data.message);
+            } else {
+                alert('Subscription successful!');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
