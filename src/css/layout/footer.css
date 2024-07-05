@@ -1,6 +1,6 @@
 .footer-section {
     background: #242424;
-    margin-left: 20px;
+   
 
 }
 
@@ -12,15 +12,15 @@
 }
 
 @media screen and (min-width: 768px) {
-    .footer-section {
-        padding-top: 32px;
-    }
+    
     .footer-container {
-        flex-direction: row;
+        flex-direction: colum;
         justify-content: space-between;
         row-gap: 110px;
     }
+   
 }
+
 
 @media screen and (min-width: 1440px) {
     .footer-section {
@@ -28,6 +28,7 @@
     }
     .footer-container {
         row-gap: 64px;
+        flex-direction: column;
     }
 }
 
@@ -40,23 +41,20 @@
 @media screen and (min-width: 768px) {
     .footer-base {
         flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
+        margin-right: 32px;
     }
 }
 
-.footer-main {
+.logo-socials {
     margin-top: 45px;
-   
 }
-
 .footer-logo {
     display: inline-block;
     
 }
 
 .footer-logo-icon {
-   fill: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 .footer-social-media-list {
@@ -93,6 +91,20 @@
 .logo:focus {
     fill: #242424; /* Колір іконки при наведенні або фокусу */
 }
+
+@media screen and (min-width: 768px) {
+    .logo-socials {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 114px;
+    margin-top: 64px;
+    margin-left: 22px;
+    }
+    .footer-logo {
+        margin-bottom: 32px;
+    }
+}
+
 
 
 .footer-text-section {
@@ -147,7 +159,7 @@
     border: 1px solid #f4f4f4;
     border-radius: 30px;
     width: 100%;
-    max-width: 335px;
+    
     height: 42px;
     background-color: #f4f4f4;
     text-align: center;
@@ -162,6 +174,39 @@
     background-color: #e0e0e0;
 }
 
+@media screen and (min-width: 768px) {
+.footer-text-section {
+    flex-direction: column
+}
+
+.footer-text-title {
+   margin-top: 64px;
+    font-size: 56px;
+    line-height: 1.07143;
+    letter-spacing: -0.02em;
+    color: #f4f4f4;
+
+}
+
+.footer-text-subtitle {
+    margin-top: 32px;
+    font-size: 18px;
+line-height: 1.33333;
+margin-right: 94px;
+
+ }
+
+.subscription-form {
+    margin-top: 20px;
+    margin-right: 94px;
+
+} 
+}
+
+
+
+
+
 .footer-rights-section {
     display: flex;
     flex-direction: column;
@@ -169,7 +214,8 @@
     font-family: "DM Sans", sans-serif;
 }
 
-.footer-rights-row {
+.footer-rights-row1,
+.footer-rights-row2 {
     margin-bottom: 10px;
     display: flex;
     margin-left: 20px;
@@ -209,12 +255,29 @@
 
 @media screen and (min-width: 768px) {
     .footer-rights-section {
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
         width: 100%;
+        margin-bottom: 16px;
     }
-    .footer-rights-text,
-    .footer-rights-row {
-        margin-bottom: 0;
+
+    .footer-rights-text {
+        margin-left: 20px;
+        
+    }
+
+    .footer-rights-row1 {
+        margin-right: 78px;
+        max-width: 434px; /* Agrega las unidades de medida (px) */
+        font-size: 506px;
+    }
+
+    .footer-rights-row2 {
+        display: flex;
+        align-items: center; /* Añade alineación si es necesario */
+    }
+
+    .footer-rights-year {
+        margin-left: 178px; /* Ajusta el margen según sea necesario */
     }
 }
